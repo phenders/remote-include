@@ -14,7 +14,7 @@ module Jekyll
     
     def render(context)
     
-		open("#{context[@markup.strip]}")
+	open("#{context[@markup.strip]}")
 
     end
     
