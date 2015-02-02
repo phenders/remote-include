@@ -2,20 +2,20 @@ require 'net/http'
 require 'uri'
 
 module Jekyll
+  
   class RemoteInclude < Liquid::Tag
   
     def initialize(tag_name, remote_include, tokens)
       super
+      @remote_include = remote_include
     end
     
-	def open(url)
-	  Net::HTTP.get(URI.parse(url))
-	end
+    def open(url)
+      Net::HTTP.get(URI.parse(url)).force_encoding 'utf-8'
+    end
     
     def render(context)
-    
-	open("#{context[@markup.strip]}")
-
+      open("#{@remote_include}")
     end
     
   end

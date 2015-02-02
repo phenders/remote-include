@@ -6,7 +6,7 @@ A remote include plugin for Jekyll.
 It's like {% include file.html %} but instead of grabbing files from your _includes directory it gets the file from a remote URL.
 
 ```
-{% remote_include http://static.2inspire.co.uk/img/articles/vector.svg %}
+{% remote_include https://raw.githubusercontent.com/jekyll/jekyll/master/README.markdown %}
 ```
 
 ## Pull requests welcome
